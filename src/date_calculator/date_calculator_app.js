@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from '.././logo.svg';
 import Calendar from 'react-calendar'
 
 function inDays(dd) {
@@ -10,7 +9,7 @@ function inWeeks(dd) {
   return Math.floor(inDays(dd)/7);
 }
 
-function Display(props) {// extends Component {
+function Display(props) {
     const dt = props.endDate.getTime() - props.startDate.getTime();
 
     return (
@@ -33,7 +32,6 @@ class DateCalculatorApp extends Component {
     }
   }
 
-  //onChangeStart = date => this.setState({ date })
   onChange(start, end) {
     start = start || this.state.start_date
     end = end || this.state.end_date
@@ -51,14 +49,14 @@ class DateCalculatorApp extends Component {
           <div className="calendar">
             <h2>Start</h2>
             <Calendar
-              onChange={(date) => this.onChange(date, null)}// this.onChangeStart}
+              onChange={(date) => this.onChange(date, null)}
               value={this.state.start_date}
             />
           </div>
           <div className="calendar">
             <h2>End</h2>
             <Calendar
-              onChange={(date) => this.onChange(null, date)}// this.onChangeStart}
+              onChange={(date) => this.onChange(null, date)}
               value={this.state.end_date}
             />
           </div>

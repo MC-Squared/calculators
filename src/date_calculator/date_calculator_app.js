@@ -14,8 +14,9 @@ function Display(props) {
 
     return (
       <div className='display-inner'>
-        <p><b>Days: </b>{inDays(dt)}</p>
-        <p><b>Weeks: </b>{inWeeks(dt)}</p>
+        <h3>Difference:</h3>
+        <b>Days: </b>{inDays(dt)}<br />
+        <b>Weeks: </b>{inWeeks(dt)}<br />
       </div>
     );
 }
@@ -47,14 +48,14 @@ class DateCalculatorApp extends Component {
       <div className="App">
         <div className="content">
           <div className="calendar">
-            <h2>Start</h2>
+            <h3><small class="text-muted">Start Date</small></h3>
             <Calendar
               onChange={(date) => this.onChange(date, null)}
               value={this.state.start_date}
             />
           </div>
           <div className="calendar">
-            <h2>End</h2>
+            <h3><small class="text-muted">End Date</small></h3>
             <Calendar
               onChange={(date) => this.onChange(null, date)}
               value={this.state.end_date}

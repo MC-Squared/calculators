@@ -9,7 +9,7 @@ import NavBar from './NavBar'
 class App extends Component {
   render() {
     switch(window.location.hostname) {
-      case 'localhost':
+      case 'calculatorcentral.com':
         return (
           <div>
             <NavBar />

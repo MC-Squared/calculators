@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
-import DateCalculatorApp from './date_calculator/date_calculator_app';
+import DateCalculatorApp from './date_calculator/DateCalculatorApp';
 import NavBar from './NavBar'
 
 class App extends Component {

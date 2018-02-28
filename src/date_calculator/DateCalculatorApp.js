@@ -29,7 +29,7 @@ class DateCalculatorApp extends Component {
   render() {
     return (
       <div className="App">
-        <NavTabs />
+        <NavTabs activeTab={this.props.match.params.activeTab} />
       </div>
     );
   }

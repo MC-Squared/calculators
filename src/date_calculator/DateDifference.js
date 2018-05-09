@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Calendar from 'react-calendar'
 
 function inDays(dd) {
-  return Math.ceil(dd/(24*3600*1000));
+  return Math.floor(dd/(24*3600*1000));
 }
 
 function inWeeks(dd) {
@@ -10,7 +10,8 @@ function inWeeks(dd) {
 }
 
 function Display(props) {
-    const dt = props.endDate.getTime() - props.startDate.getTime();
+    const dt = props.endDate.getTime() - props.endDate.getTimezoneOffset() -
+     props.startDate.getTime() - props.startDate.getTimezoneOffset();
 
     return (
       <div className='display-inner'>

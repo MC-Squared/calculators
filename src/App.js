@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 import DateCalculatorApp from './date_calculator/DateCalculatorApp';
+import MortgageApp from './mortgage/MortgageApp';
 import NavBar from './NavBar'
 
 class App extends Component {
@@ -27,6 +28,16 @@ class App extends Component {
           <Route
             path = "/date/:activeTab"
             component = {DateCalculatorApp}
+          />
+
+          <Route
+            exact path = "/mortgage"
+            component = {MortgageApp}
+          />
+
+          <Route
+            path = "/mortgage/:activeTab"
+            component = {MortgageApp}
           />
         </div>
       </BrowserRouter>

@@ -23,7 +23,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://calculatorcentral.com",
+  "homepage": "https://calculatorcentral.netlify.com",
   "devDependencies": {
     "gh-pages": "2.0.1"
   },

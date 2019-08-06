@@ -24,11 +24,15 @@ class MortgagePayments extends Component {
   calculatePayment(period) {
     var period_interest = (this.state.interest / 100.0) / period;
     var payment_count = period * this.state.years;
+    var formatter = new Intl.NumberFormat(undefined, {
+      style: 'currency',
+      currency: 'USD',
+    });
 
-    return (this.state.loan * (
+    return formatter.format(this.state.loan * (
       (period_interest * Math.pow(1 + period_interest, payment_count)) /
         (Math.pow(1 + period_interest, payment_count) - 1)
-    )).toFixed(2);
+    ));
   }
 
   render() {
@@ -89,7 +93,7 @@ class MortgagePayments extends Component {
               Weekly:
             </div>
             <div className='col-4 col-md-2 result-price'>
-              ${this.calculatePayment(52)}
+              {this.calculatePayment(52)}
             </div>
             <div className='col-2 col-md-4'/>
 
@@ -98,7 +102,7 @@ class MortgagePayments extends Component {
               Bimonthly:
             </div>
             <div className='col-4 col-md-2 result-price'>
-              ${this.calculatePayment(26)}
+              {this.calculatePayment(26)}
             </div>
             <div className='col-2 col-md-4'/>
 
@@ -107,7 +111,7 @@ class MortgagePayments extends Component {
               Monthly:
             </div>
             <div className='col-4 col-md-2 result-price'>
-              ${this.calculatePayment(12)}
+              {this.calculatePayment(12)}
             </div>
             <div className='col-2 col-md-4'/>
           </div>

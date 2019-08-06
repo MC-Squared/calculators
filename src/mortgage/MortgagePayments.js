@@ -36,8 +36,8 @@ class MortgagePayments extends Component {
       <div className='math'>
 
         <div className='row math-row'>
-          <div className='col-1' />
-          <div className='col-6 text-input'>
+          <div className='col-1 col-md-3' />
+          <div className='col-6 col-md-3 text-input'>
           <Input
             id='loan'
             onChange={(e) => this.onChangeNumbers()}
@@ -45,13 +45,13 @@ class MortgagePayments extends Component {
             value={this.state.loan}
           />
           </div>
-          <div className='math-label col-4'>Loan Amount</div>
-          <div className='col-1' />
+          <div className='math-label col-4 col-md-3'>Loan Amount</div>
+          <div className='col-1 col-md-3' />
         </div>
 
         <div className='row math-row'>
-          <div className='col-1' />
-          <div className='col-6 text-input'>
+          <div className='col-1 col-md-3' />
+          <div className='col-6 col-md-3 text-input'>
           <Input
             id='interest'
             onChange={(e) => this.onChangeNumbers()}
@@ -59,13 +59,13 @@ class MortgagePayments extends Component {
             value={this.state.interest}
           />
           </div>
-          <div className='math-label col-4'>Interest</div>
-          <div className='col-1' />
+          <div className='math-label col-4 col-md-3'>Interest</div>
+          <div className='col-1 col-md-3' />
         </div>
 
         <div className='row math-row'>
-          <div className='col-1' />
-          <div className='col-6 text-input'>
+          <div className='col-1 col-md-3' />
+          <div className='col-6 col-md-3 text-input'>
             <Input
               id='years'
               onChange={(e) => this.onChangeNumbers()}
@@ -73,8 +73,8 @@ class MortgagePayments extends Component {
               value={this.state.years}
             />
           </div>
-          <div className='math-label col-4'>Interest</div>
-          <div className='col-1' />
+          <div className='math-label col-4 col-md-3'>Years</div>
+          <div className='col-1 col-md-3' />
         </div>
 
         <div className='result row'>
@@ -84,32 +84,32 @@ class MortgagePayments extends Component {
           </div>
 
           <div className='row'>
-            <div className='col-2'/>
-            <div className='col-4 result-label'>
+            <div className='col-2 col-md-4'/>
+            <div className='col-4 col-md-2 result-label'>
               Weekly:
             </div>
-            <div className='col-4 result-price'>
+            <div className='col-4 col-md-2 result-price'>
               ${this.calculatePayment(52)}
             </div>
-            <div className='col-2'/>
+            <div className='col-2 col-md-4'/>
 
-            <div className='col-2'/>
-            <div className='col-4 result-label'>
+            <div className='col-2 col-md-4'/>
+            <div className='col-4 col-md-2 result-label'>
               Bimonthly:
             </div>
-            <div className='col-4 result-price'>
+            <div className='col-4 col-md-2 result-price'>
               ${this.calculatePayment(26)}
             </div>
-            <div className='col-2'/>
+            <div className='col-2 col-md-4'/>
 
-            <div className='col-2'/>
-            <div className='col-4 result-label'>
+            <div className='col-2 col-md-4'/>
+            <div className='col-4 col-md-2 result-label'>
               Monthly:
             </div>
-            <div className='col-4 result-price'>
+            <div className='col-4 col-md-2 result-price'>
               ${this.calculatePayment(12)}
             </div>
-            <div className='col-2'/>
+            <div className='col-2 col-md-4'/>
           </div>
         </div>
       </div>

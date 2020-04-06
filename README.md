@@ -6,9 +6,8 @@ This is largely a learning/experimentation project with the following goals:
 
 * Learn about React by creating a simple app
 * Experiment with monitizing a small web app
-  * Free hosting via Github pages
+  * Free hosting via Netlify
   * Placing Ads
-  * Running a coin miner
 
 ## Current calcuators:
 * Date

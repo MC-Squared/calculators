@@ -8,7 +8,7 @@
     "popper": "^1.0.1",
     "prop-types": "^15.6.0",
     "react": "^16.13.1",
-    "react-calendar": "^3.0.1",
+    "react-calendar": "^3.3.0",
     "react-dom": "^16.13.1",
     "react-moment": "^0.9.7",
     "react-router-dom": "^5.1.2",
